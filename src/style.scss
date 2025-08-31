@@ -1,0 +1,81 @@
+$color-main: #36454F;
+$color-second: #F4F0E8;
+$color-accent: #C45B3C;
+
+@mixin inter($size: 20px, $weight: 400) {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: $size;
+}
+
+
+@mixin button($padding-up-down: 15px, $padding-left-right: 20px, $border-radius: 15px) {
+  background-color: $color-accent;
+  border: none;
+  border-radius: $border-radius;
+  padding: $padding-up-down $padding-left-right;
+  display: flex;
+  align-items: center;
+  color: $color-second;
+  gap: $padding-left-right;
+}
+
+
+body {
+  background-color: $color-main;
+  @include inter;
+}
+
+.header {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 80px;
+  }
+  &__left, &__right, &__logo {
+    display: flex;
+    align-items: center;
+  }
+  &__right {
+    gap: 160px;
+  }
+}
+
+.logo {
+  text-decoration: none;
+  gap: 30px;
+  &__icon {
+    height: 50px;
+  }
+  &__text {
+    color: $color-second;
+    @include inter(40px, 600);
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 80px;
+  }
+  &__link {
+    @include inter(24px, 500);
+    color: $color-second;
+    text-decoration: none;
+  }
+}
+
+.consultation-btn {
+  @include button;
+  @include inter(24px, 600);
+}
