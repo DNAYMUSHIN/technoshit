@@ -602,3 +602,165 @@ body {
     }
   }
 }
+
+
+.section-container {
+  padding: 75px 0;
+  color: $color-second;
+  position: relative;
+  z-index: 10;
+  background-color: $color-main;
+
+  .section {
+    max-width: 80vw;
+    margin: 0 auto;
+    &__title {
+      @include inter(40px, 600);
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.card-container {
+  margin-top: 75px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 75px;
+}
+
+.card {
+  background-color: #d9d9d9;
+  color: $color-main;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  padding: 0 40px;
+
+
+  &__title {
+    @include inter(30px, 500);
+    margin: 40px 0 0;
+  }
+  &__subtitle {
+    @include inter(24px, 400);
+    line-height: 1.6em;
+    margin: 50px 0;
+  }
+}
+
+
+@media (max-width: 1700px) {
+
+
+  .section-container {
+    padding: 50px 0;
+
+    .section {
+      max-width: 90vw;
+      &__title {
+        @include inter(40px, 600);
+      }
+    }
+  }
+
+  .card-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+
+  .card {
+    background-color: #d9d9d9;
+    color: $color-main;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    padding: 0 40px;
+
+
+    &__title {
+      @include inter(30px, 500);
+      margin: 40px 0 0;
+    }
+    &__subtitle {
+      @include inter(24px, 400);
+      line-height: 1.6em;
+      margin: 50px 0;
+    }
+  }
+
+}
+
+
+@media (max-width: 1400px) {
+
+
+  .section-container {
+    .section {
+      &__title {
+        @include inter(32px, 600);
+      }
+    }
+  }
+
+  .card-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 50px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    padding: 0 40px;
+
+
+    &__title {
+      @include inter(24px, 500);
+    }
+    &__subtitle {
+      @include inter(18px, 400);
+      line-height: 1.6em;
+      margin: 20px 0;
+    }
+  }
+
+}
+
+
+@media (max-width: 1400px) {
+  .section-container {
+    .section {
+      &__title {
+        @include inter(32px, 600);
+      }
+    }
+  }
+
+  .card-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 50px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    padding: 0 40px;
+
+
+    &__title {
+      @include inter(24px, 500);
+    }
+    &__subtitle {
+      @include inter(18px, 400);
+      line-height: 1.6em;
+      margin: 20px 0;
+    }
+  }
+
+}
